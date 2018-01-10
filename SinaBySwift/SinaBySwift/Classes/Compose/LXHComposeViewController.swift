@@ -22,8 +22,16 @@ class LXHComposeViewController: UIViewController {
         setupNav()
         setutInputView()
         setupToolBar()
+        addChildViewController(emoticonVC)
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        textView.becomeFirstResponder()
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        textView.resignFirstResponder()
+    }
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
@@ -68,8 +76,8 @@ class LXHComposeViewController: UIViewController {
         toolBarConstraint = toolBar.xmg_Constraint(constraintsList: cons, attribute: NSLayoutAttribute.bottom)!
     }
     /// 文本框
-    private lazy var textView:UITextView = {
-        let tV = UITextView()
+    private lazy var textView:LXHEmoTextView = {
+        let tV = LXHEmoTextView()
         tV.font = UIFont.systemFont(ofSize: 17)
         tV.delegate = self
         return tV
@@ -106,7 +114,7 @@ class LXHComposeViewController: UIViewController {
         let itemImages = ["compose_toolbar_picture","compose_mentionbutton_background","compose_trendbutton_background","compose_emoticonbutton_background","compose_addbutton_background"]
         
         for i in 0..<itemImages.count{
-            let item = UIBarButtonItem.creatBarButtonItem(imageName: itemImages[i], target: self, action: #selector(selectPicture))
+            let item = UIBarButtonItem.creatBarButtonItem(imageName: itemImages[i], target: self, action: #selector(inputEmoticon))
             items.append(item)
             items.append(UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil))
             
@@ -115,6 +123,9 @@ class LXHComposeViewController: UIViewController {
         bar.items = items
         return bar
     }()
+    private lazy var emoticonVC:LXHEmoticonViewController = LXHEmoticonViewController.init { (emoticon) in
+        self.textView.insertEmoticon(emoticon: emoticon)
+    }
     /**
      选择相片
      */
@@ -122,11 +133,16 @@ class LXHComposeViewController: UIViewController {
     {
         
     }
+    
     /**
      切换表情键盘
      */
     @objc func inputEmoticon()
     {
+        textView.resignFirstResponder()
+        //系统键盘的inputView == nil 第三方的inputView != nil
+        textView.inputView = (textView.inputView == nil) ? emoticonVC.view : nil
+        textView.becomeFirstResponder()
         
     }
     /// 关闭当前界面
@@ -136,7 +152,12 @@ class LXHComposeViewController: UIViewController {
     
     /// 发送微博数据
     @objc func sendBtnClick(){
-        let urlStr = "https://upload.api.weibo.com/2/statuses/upload.json?access_token=\(LXHLoginAccount.loadUserAccount()?.access_token ?? "lxh")&status=\(textView.text!)"
+        var tVContent = ""
+        
+        textView.emoticonAttributedText { (content) in
+            tVContent = content
+        }
+        let urlStr = "https://upload.api.weibo.com/2/statuses/upload.json?access_token=\(LXHLoginAccount.loadUserAccount()?.access_token ?? "lxh")&status=\(tVContent)"
         Alamofire.request(urlStr, method: HTTPMethod.post, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseJSON { (response:DataResponse) in
             switch response.result {
                 

@@ -30,18 +30,16 @@ class LXHEmoticonViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-//        if times == 0 {
-            if packages[0].recentlyEmos?.count == 0{
-                if collectionView.contentOffset.x == 0{
-                    
-                    collectionView.contentOffset.x += collectionView.bounds.size.width
-                }
+//        if packages[0].recentlyEmos?.count == 0{
+//            if collectionView.contentOffset.x == 0{
+//
+//                collectionView.contentOffset.x += sBounds.width
+//                print(collectionView)
+//                pageController.changePageControllerNums(pages: numOfPages[1], current: 0)
 //            }
-//            times = 1
-        }
+//        }
+
     }
-    
     
     
     init(emoticon:  @escaping (_ emoticon:LXHEmoticon)->()) {
@@ -89,8 +87,23 @@ class LXHEmoticonViewController: UIViewController {
         clv.backgroundColor = UIColor.init(red: 160, green: 160, blue: 160, alpha: 0.3)
         clv.showsVerticalScrollIndicator = false
         clv.showsHorizontalScrollIndicator = false
+        clv.addObserver(self, forKeyPath: "contentOffset", options: NSKeyValueObservingOptions.new, context: nil)
         return clv
     }()
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if collectionView.frame.size.width == 0 {
+            return
+        }
+        print(collectionView.frame)
+        if packages[0].recentlyEmos?.count == 0{
+            if collectionView.contentOffset.x == 0{
+                
+                collectionView.contentOffset.x += sBounds.width
+                print(collectionView)
+                pageController.changePageControllerNums(pages: numOfPages[1], current: 0)
+            }
+        }
+    }
     private lazy var toolBar:UIToolbar = {
         let bar = UIToolbar()
         bar.tintColor = UIColor.darkGray
@@ -177,7 +190,9 @@ class LXHEmoticonViewController: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+    deinit {
+        removeObserver(self, forKeyPath: "contentOffset")
+    }
 }
 /*
 class LXHPageController: UIPageControl {
