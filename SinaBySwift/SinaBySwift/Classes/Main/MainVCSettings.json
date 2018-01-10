@@ -1,0 +1,27 @@
+[
+ {
+    "vcName": "LXHHomeTableViewController",
+    "title": "首页",
+    "imageName": "tabbar_home"
+ },
+ {
+     "vcName": "LXHMessageTableViewController",
+     "title": "消息",
+     "imageName": "tabbar_message_center"
+ },
+ {
+     "vcName": "NullViewController",
+     "title": "",
+     "imageName": ""
+ },
+ {
+     "vcName": "LXHDiscoverTableViewController",
+     "title": "发现",
+     "imageName": "tabbar_discover"
+ },
+ {
+     "vcName": "LXHProfileTableViewController",
+     "title": "我",
+     "imageName": "tabbar_profile"
+ }
+ ]
