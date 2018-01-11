@@ -17,19 +17,19 @@
 		2FFB75631FF1270800C17C77 /* LXHHomeCellFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFB75621FF1270800C17C77 /* LXHHomeCellFooterView.swift */; };
 		2FFB75651FF1271E00C17C77 /* LXHHomePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFB75641FF1271E00C17C77 /* LXHHomePictureView.swift */; };
 		4C81B87174B43772EE339337 /* Pods_SinaBySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF5CCDC8F676A1ADC7D2AD9 /* Pods_SinaBySwift.framework */; };
-		DA170B272005F6F20069E33E /* DispatchQueue+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA170B1E2005F6F20069E33E /* DispatchQueue+Category.swift */; };
-		DA170B282005F6F20069E33E /* Emoticons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DA170B1F2005F6F20069E33E /* Emoticons.bundle */; };
-		DA170B292005F6F20069E33E /* LXHEmoAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA170B202005F6F20069E33E /* LXHEmoAttachment.swift */; };
-		DA170B2A2005F6F20069E33E /* LXHEmoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA170B212005F6F20069E33E /* LXHEmoTextView.swift */; };
-		DA170B2B2005F6F20069E33E /* LXHEmoticonPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA170B222005F6F20069E33E /* LXHEmoticonPackage.swift */; };
-		DA170B2C2005F6F20069E33E /* LXHEmoticonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA170B232005F6F20069E33E /* LXHEmoticonViewController.swift */; };
-		DA170B2D2005F6F20069E33E /* LXHFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA170B242005F6F20069E33E /* LXHFlowLayout.swift */; };
-		DA170B2E2005F6F20069E33E /* LXHPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA170B252005F6F20069E33E /* LXHPageControl.swift */; };
-		DA170B2F2005F6F20069E33E /* String+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA170B262005F6F20069E33E /* String+Category.swift */; };
 		DA170B31200612A80069E33E /* LXHComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA170B30200612A80069E33E /* LXHComposeViewController.swift */; };
 		DA36086E1FFB4D5900C0F5B7 /* LXHPhotoBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA36086D1FFB4D5900C0F5B7 /* LXHPhotoBrowserViewController.swift */; };
 		DA3608701FFB555600C0F5B7 /* LXHPhotoBrowserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA36086F1FFB555600C0F5B7 /* LXHPhotoBrowserCell.swift */; };
 		DA4C04D51FEDEB0D00FF5C32 /* NSDate+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4C04D41FEDEB0D00FF5C32 /* NSDate+Category.swift */; };
+		DA4D444D2006F753006B9157 /* DispatchQueue+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4D44442006F753006B9157 /* DispatchQueue+Category.swift */; };
+		DA4D444E2006F753006B9157 /* Emoticons.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DA4D44452006F753006B9157 /* Emoticons.bundle */; };
+		DA4D444F2006F753006B9157 /* LXHEmoAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4D44462006F753006B9157 /* LXHEmoAttachment.swift */; };
+		DA4D44502006F753006B9157 /* LXHEmoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4D44472006F753006B9157 /* LXHEmoTextView.swift */; };
+		DA4D44512006F753006B9157 /* LXHEmoticonPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4D44482006F753006B9157 /* LXHEmoticonPackage.swift */; };
+		DA4D44522006F753006B9157 /* LXHEmoticonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4D44492006F753006B9157 /* LXHEmoticonViewController.swift */; };
+		DA4D44532006F753006B9157 /* LXHFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4D444A2006F753006B9157 /* LXHFlowLayout.swift */; };
+		DA4D44542006F753006B9157 /* LXHPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4D444B2006F753006B9157 /* LXHPageControl.swift */; };
+		DA4D44552006F753006B9157 /* String+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4D444C2006F753006B9157 /* String+Category.swift */; };
 		DA6681521FEC978C007FD71F /* LXHStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6681511FEC978C007FD71F /* LXHStatus.swift */; };
 		DA6681541FEC97E4007FD71F /* LXHUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6681531FEC97E4007FD71F /* LXHUserInfo.swift */; };
 		DAD0EAF41FE381D100FD5BF7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD0EAF31FE381D100FD5BF7 /* CoreGraphics.framework */; };
@@ -93,19 +93,19 @@
 		ADE4C313D2CB918CE844E7D5 /* Pods-SinaBySwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinaBySwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-SinaBySwift/Pods-SinaBySwift.release.xcconfig"; sourceTree = "<group>"; };
 		C8105D8BC701F8146EC9FD06 /* Pods-SinaBySwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SinaBySwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SinaBySwift/Pods-SinaBySwift.debug.xcconfig"; sourceTree = "<group>"; };
 		CBF5CCDC8F676A1ADC7D2AD9 /* Pods_SinaBySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SinaBySwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA170B1E2005F6F20069E33E /* DispatchQueue+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Category.swift"; sourceTree = "<group>"; };
-		DA170B1F2005F6F20069E33E /* Emoticons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Emoticons.bundle; sourceTree = "<group>"; };
-		DA170B202005F6F20069E33E /* LXHEmoAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXHEmoAttachment.swift; sourceTree = "<group>"; };
-		DA170B212005F6F20069E33E /* LXHEmoTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXHEmoTextView.swift; sourceTree = "<group>"; };
-		DA170B222005F6F20069E33E /* LXHEmoticonPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXHEmoticonPackage.swift; sourceTree = "<group>"; };
-		DA170B232005F6F20069E33E /* LXHEmoticonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXHEmoticonViewController.swift; sourceTree = "<group>"; };
-		DA170B242005F6F20069E33E /* LXHFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXHFlowLayout.swift; sourceTree = "<group>"; };
-		DA170B252005F6F20069E33E /* LXHPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXHPageControl.swift; sourceTree = "<group>"; };
-		DA170B262005F6F20069E33E /* String+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Category.swift"; sourceTree = "<group>"; };
 		DA170B30200612A80069E33E /* LXHComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LXHComposeViewController.swift; sourceTree = "<group>"; };
 		DA36086D1FFB4D5900C0F5B7 /* LXHPhotoBrowserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LXHPhotoBrowserViewController.swift; sourceTree = "<group>"; };
 		DA36086F1FFB555600C0F5B7 /* LXHPhotoBrowserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LXHPhotoBrowserCell.swift; sourceTree = "<group>"; };
 		DA4C04D41FEDEB0D00FF5C32 /* NSDate+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Category.swift"; sourceTree = "<group>"; };
+		DA4D44442006F753006B9157 /* DispatchQueue+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Category.swift"; sourceTree = "<group>"; };
+		DA4D44452006F753006B9157 /* Emoticons.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Emoticons.bundle; sourceTree = "<group>"; };
+		DA4D44462006F753006B9157 /* LXHEmoAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXHEmoAttachment.swift; sourceTree = "<group>"; };
+		DA4D44472006F753006B9157 /* LXHEmoTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXHEmoTextView.swift; sourceTree = "<group>"; };
+		DA4D44482006F753006B9157 /* LXHEmoticonPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXHEmoticonPackage.swift; sourceTree = "<group>"; };
+		DA4D44492006F753006B9157 /* LXHEmoticonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXHEmoticonViewController.swift; sourceTree = "<group>"; };
+		DA4D444A2006F753006B9157 /* LXHFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXHFlowLayout.swift; sourceTree = "<group>"; };
+		DA4D444B2006F753006B9157 /* LXHPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXHPageControl.swift; sourceTree = "<group>"; };
+		DA4D444C2006F753006B9157 /* String+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Category.swift"; sourceTree = "<group>"; };
 		DA6681511FEC978C007FD71F /* LXHStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LXHStatus.swift; sourceTree = "<group>"; };
 		DA6681531FEC97E4007FD71F /* LXHUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LXHUserInfo.swift; sourceTree = "<group>"; };
 		DAD0EAF31FE381D100FD5BF7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -193,25 +193,10 @@
 		DA13946C1FFC660B00F389F7 /* Compose */ = {
 			isa = PBXGroup;
 			children = (
+				DA4D44432006F753006B9157 /* EmoticonView */,
 				DA170B30200612A80069E33E /* LXHComposeViewController.swift */,
 			);
 			path = Compose;
-			sourceTree = "<group>";
-		};
-		DA170B1D2005F6F20069E33E /* EmoticonView */ = {
-			isa = PBXGroup;
-			children = (
-				DA170B1F2005F6F20069E33E /* Emoticons.bundle */,
-				DA170B232005F6F20069E33E /* LXHEmoticonViewController.swift */,
-				DA170B222005F6F20069E33E /* LXHEmoticonPackage.swift */,
-				DA170B242005F6F20069E33E /* LXHFlowLayout.swift */,
-				DA170B252005F6F20069E33E /* LXHPageControl.swift */,
-				DA170B212005F6F20069E33E /* LXHEmoTextView.swift */,
-				DA170B202005F6F20069E33E /* LXHEmoAttachment.swift */,
-				DA170B262005F6F20069E33E /* String+Category.swift */,
-				DA170B1E2005F6F20069E33E /* DispatchQueue+Category.swift */,
-			);
-			path = EmoticonView;
 			sourceTree = "<group>";
 		};
 		DA36086C1FFB4D1300C0F5B7 /* PhotoBrowser */ = {
@@ -221,6 +206,22 @@
 				DA36086F1FFB555600C0F5B7 /* LXHPhotoBrowserCell.swift */,
 			);
 			path = PhotoBrowser;
+			sourceTree = "<group>";
+		};
+		DA4D44432006F753006B9157 /* EmoticonView */ = {
+			isa = PBXGroup;
+			children = (
+				DA4D44492006F753006B9157 /* LXHEmoticonViewController.swift */,
+				DA4D444A2006F753006B9157 /* LXHFlowLayout.swift */,
+				DA4D444B2006F753006B9157 /* LXHPageControl.swift */,
+				DA4D44482006F753006B9157 /* LXHEmoticonPackage.swift */,
+				DA4D44472006F753006B9157 /* LXHEmoTextView.swift */,
+				DA4D44462006F753006B9157 /* LXHEmoAttachment.swift */,
+				DA4D44442006F753006B9157 /* DispatchQueue+Category.swift */,
+				DA4D444C2006F753006B9157 /* String+Category.swift */,
+				DA4D44452006F753006B9157 /* Emoticons.bundle */,
+			);
+			path = EmoticonView;
 			sourceTree = "<group>";
 		};
 		DAE26B9B1FE35B75009858B0 = {
@@ -284,7 +285,6 @@
 				DA13946C1FFC660B00F389F7 /* Compose */,
 				DAE26BD61FE35C26009858B0 /* Discover */,
 				DAE26BEB1FE35C26009858B0 /* Profile */,
-				DA170B1D2005F6F20069E33E /* EmoticonView */,
 				DAE26BED1FE35C26009858B0 /* Tools */,
 			);
 			path = Classes;
@@ -512,7 +512,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAE26BAF1FE35B75009858B0 /* Assets.xcassets in Resources */,
-				DA170B282005F6F20069E33E /* Emoticons.bundle in Resources */,
+				DA4D444E2006F753006B9157 /* Emoticons.bundle in Resources */,
 				DAE26BFD1FE35C26009858B0 /* MainVCSettings.json in Resources */,
 				2FD862FA1FF3B53D0066FFC6 /* LXHHomeRefreshView.xib in Resources */,
 				DAE26BF61FE35C26009858B0 /* LXHPopoverViewController.storyboard in Resources */,
@@ -610,40 +610,40 @@
 				DA3608701FFB555600C0F5B7 /* LXHPhotoBrowserCell.swift in Sources */,
 				DAFE3D581FF334820029E2B2 /* LXHNormalTableViewCell.swift in Sources */,
 				DA6681521FEC978C007FD71F /* LXHStatus.swift in Sources */,
-				DA170B2E2005F6F20069E33E /* LXHPageControl.swift in Sources */,
+				DA4D44522006F753006B9157 /* LXHEmoticonViewController.swift in Sources */,
+				DA4D444D2006F753006B9157 /* DispatchQueue+Category.swift in Sources */,
 				DAE26C041FE35C26009858B0 /* UIView+AutoLayout.swift in Sources */,
 				2FFB75631FF1270800C17C77 /* LXHHomeCellFooterView.swift in Sources */,
+				DA4D44502006F753006B9157 /* LXHEmoTextView.swift in Sources */,
 				2F59B84F1FE56071000EE1F4 /* LXHWelcomeViewController.swift in Sources */,
+				DA4D44542006F753006B9157 /* LXHPageControl.swift in Sources */,
 				DAE26C021FE35C26009858B0 /* UIAlertController+Category.swift in Sources */,
 				DAE26BF51FE35C26009858B0 /* LXHPopoverAnimator.swift in Sources */,
 				DAE26BF71FE35C26009858B0 /* LXHPopoverViewController.swift in Sources */,
+				DA4D44512006F753006B9157 /* LXHEmoticonPackage.swift in Sources */,
 				DAE26BFF1FE35C26009858B0 /* LXHMessageTableViewController.swift in Sources */,
 				DAF54B4A1FE4CEE200E6282F /* LXHLoginAccount.swift in Sources */,
 				DAE26BFB1FE35C26009858B0 /* LXHMainViewController.swift in Sources */,
 				DAE26BFE1FE35C26009858B0 /* NullViewController.swift in Sources */,
-				DA170B292005F6F20069E33E /* LXHEmoAttachment.swift in Sources */,
 				DAE26BFA1FE35C26009858B0 /* LXHBaseTableViewController.swift in Sources */,
 				DA36086E1FFB4D5900C0F5B7 /* LXHPhotoBrowserViewController.swift in Sources */,
 				DAE26BFC1FE35C26009858B0 /* LXHVisitorView.swift in Sources */,
 				2F59B8531FE94405000EE1F4 /* UILabel+Category.swift in Sources */,
 				DAE26C011FE35C26009858B0 /* LXHTitleButton.swift in Sources */,
-				DA170B2D2005F6F20069E33E /* LXHFlowLayout.swift in Sources */,
 				DAE26BA81FE35B75009858B0 /* AppDelegate.swift in Sources */,
-				DA170B2C2005F6F20069E33E /* LXHEmoticonViewController.swift in Sources */,
 				DAE26BF21FE35C26009858B0 /* LXHDiscoverTableViewController.swift in Sources */,
 				DA170B31200612A80069E33E /* LXHComposeViewController.swift in Sources */,
 				DA6681541FEC97E4007FD71F /* LXHUserInfo.swift in Sources */,
+				DA4D444F2006F753006B9157 /* LXHEmoAttachment.swift in Sources */,
 				2FFB75611FF126F700C17C77 /* LXHHomeCellTopView.swift in Sources */,
-				DA170B272005F6F20069E33E /* DispatchQueue+Category.swift in Sources */,
 				2FD862F81FF3B51A0066FFC6 /* LXHHomeRefreshControl.swift in Sources */,
+				DA4D44552006F753006B9157 /* String+Category.swift in Sources */,
 				DAE26C001FE35C26009858B0 /* LXHProfileTableViewController.swift in Sources */,
-				DA170B2B2005F6F20069E33E /* LXHEmoticonPackage.swift in Sources */,
 				2F59B8551FE94418000EE1F4 /* UIButton+Category.swift in Sources */,
 				DAFE3D561FF334680029E2B2 /* LXHForwardTableViewCell.swift in Sources */,
+				DA4D44532006F753006B9157 /* LXHFlowLayout.swift in Sources */,
 				DAE26BF31FE35C26009858B0 /* LXHHomeTableViewController.swift in Sources */,
-				DA170B2A2005F6F20069E33E /* LXHEmoTextView.swift in Sources */,
 				DAE26BF91FE35C26009858B0 /* LXHQRCodeViewController.swift in Sources */,
-				DA170B2F2005F6F20069E33E /* String+Category.swift in Sources */,
 				DAE26BF41FE35C26009858B0 /* LXHOAuthViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

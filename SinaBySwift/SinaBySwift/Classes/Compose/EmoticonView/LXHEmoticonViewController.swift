@@ -28,19 +28,6 @@ class LXHEmoticonViewController: UIViewController {
         setupUI()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-//        if packages[0].recentlyEmos?.count == 0{
-//            if collectionView.contentOffset.x == 0{
-//
-//                collectionView.contentOffset.x += sBounds.width
-//                print(collectionView)
-//                pageController.changePageControllerNums(pages: numOfPages[1], current: 0)
-//            }
-//        }
-
-    }
-    
     
     init(emoticon:  @escaping (_ emoticon:LXHEmoticon)->()) {
         
@@ -87,23 +74,8 @@ class LXHEmoticonViewController: UIViewController {
         clv.backgroundColor = UIColor.init(red: 160, green: 160, blue: 160, alpha: 0.3)
         clv.showsVerticalScrollIndicator = false
         clv.showsHorizontalScrollIndicator = false
-        clv.addObserver(self, forKeyPath: "contentOffset", options: NSKeyValueObservingOptions.new, context: nil)
         return clv
     }()
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if collectionView.frame.size.width == 0 {
-            return
-        }
-        print(collectionView.frame)
-        if packages[0].recentlyEmos?.count == 0{
-            if collectionView.contentOffset.x == 0{
-                
-                collectionView.contentOffset.x += sBounds.width
-                print(collectionView)
-                pageController.changePageControllerNums(pages: numOfPages[1], current: 0)
-            }
-        }
-    }
     private lazy var toolBar:UIToolbar = {
         let bar = UIToolbar()
         bar.tintColor = UIColor.darkGray
@@ -113,8 +85,21 @@ class LXHEmoticonViewController: UIViewController {
         
         for package in packages
         {
-            let item = UIBarButtonItem.init(title: package.group_name_cn, style: UIBarButtonItemStyle.plain, target: self, action: #selector(itemClick(item:)))
-            item.tag = 10 + index
+            let btn = UIButton.init(type: .custom)
+            
+            btn.setBackgroundImage(UIImage.init(named: "compose_app_default"), for: .disabled)
+            btn.addTarget(self, action: #selector(itemClick(item:)), for: .touchUpInside)
+            btn.setTitle(package.group_name_cn, for: .normal)
+            
+            btn.setTitleColor(UIColor.lightGray, for: UIControlState.normal)
+            btn.tag = 10 + index
+            if index == 0{
+                btn.isEnabled = false
+                currentItem = btn
+            }
+            itemBtns.append(btn)
+            let item = UIBarButtonItem.init(customView: btn)
+            
             index += 1
             items.append(item)
             items.append(UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil))
@@ -134,6 +119,12 @@ class LXHEmoticonViewController: UIViewController {
         }
         return page
     }()
+    
+    /// 记录当前的点击的表情包
+    var currentItem = UIButton()
+    
+    /// 保存创建items的btn
+    var itemBtns = [UIButton]()
     
     /// 记录每个表情包滑动到第几页
     var itemCounts: [NSInteger] = [0,0,0,0]
@@ -168,8 +159,11 @@ class LXHEmoticonViewController: UIViewController {
         return flowlayout
     }()
     private lazy var packages: [LXHEmoticonPackage] = LXHEmoticonPackage.packages
-    @objc func itemClick(item: UIBarButtonItem)
+    @objc func itemClick(item: UIButton)
     {
+        currentItem.isEnabled = true
+        currentItem = item
+        item.isEnabled = false
         let index = item.tag - 10
         currentEmos = index
         var indexPath:IndexPath?
@@ -190,9 +184,7 @@ class LXHEmoticonViewController: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    deinit {
-        removeObserver(self, forKeyPath: "contentOffset")
-    }
+    
 }
 /*
 class LXHPageController: UIPageControl {
@@ -276,6 +268,7 @@ class LXHEmoticonCell: UICollectionViewCell {
         btn.isUserInteractionEnabled = false
         btn.backgroundColor = UIColor.clear
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 32)
+    
         return btn
     }()
     required init?(coder aDecoder: NSCoder) {
@@ -339,6 +332,19 @@ extension LXHEmoticonViewController:UICollectionViewDataSource,UICollectionViewD
         })
         
     }
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if packages[0].recentlyEmos?.count == 0{
+            if collectionView.contentOffset.x == 0{
+                
+                collectionView.contentOffset.x += collectionView.bounds.size.width
+                pageController.changePageControllerNums(pages: numOfPages[1], current: 0)
+                currentItem.isEnabled = true
+                currentItem = itemBtns[1]
+                currentItem.isEnabled = false
+            }
+        }
+        
+    }
 //    1.完成最近表情的添加及显示（目前支持两页，实际开发中应该只需要一页 ，在最近表情有多页时需要刷新表格视图会有一个闪烁的bug 这个如果采用的是一个表格视图应该是没办法解决的 -- 可能需要使用不同的表格视图或者控制器去控制）
 //    2.明日目标 完成对最近表情的本地化处理及从本地加载图片表情
     
@@ -381,7 +387,14 @@ extension LXHEmoticonViewController:UICollectionViewDataSource,UICollectionViewD
         for i in 0..<currentEmos {
             numsOfPagesBefore += numOfPages[i]
         }
+        if currentItem != itemBtns[currentEmos] {
+            currentItem.isEnabled = true
+            currentItem = itemBtns[currentEmos]
+            currentItem.isEnabled = false
+        }
+        
         pageController.changePageControllerNums(pages: pages, current: current)
+        
         
     }
 }
