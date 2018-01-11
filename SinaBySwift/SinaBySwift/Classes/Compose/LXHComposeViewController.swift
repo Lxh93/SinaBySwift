@@ -98,12 +98,15 @@ class LXHComposeViewController: UIViewController {
         let rect = value.cgRectValue
         toolBarConstraint?.constant = -(sBounds.size.height - rect.origin.y)
         let duration = notify.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! NSNumber
-        
+        //取出动画曲线7
+        //该动画曲线有一个特点:如果连续执行两次动画，那么不管上一次有没有执行完毕，都会执行下一次动画，并且动画时长一定为0.5
+        let curve = notify.userInfo![UIKeyboardAnimationCurveUserInfoKey] as! NSNumber
         UIView.animate(withDuration: duration.doubleValue, animations: {
-            
+            UIView.setAnimationCurve(UIViewAnimationCurve.init(rawValue: curve.intValue)!)
             self.view.layoutIfNeeded()
         })
-        
+        let anim = toolBar.layer.animation(forKey: "position")
+        print("duration = \(anim!.duration)")
     }
     private lazy var toolBar:UIToolbar = {
         let bar = UIToolbar()
