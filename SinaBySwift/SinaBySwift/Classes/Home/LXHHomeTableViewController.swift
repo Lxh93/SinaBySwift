@@ -140,12 +140,16 @@ class LXHHomeTableViewController: LXHBaseTableViewController {
     @objc func titleBtnClick(btn:LXHTitleButton){
 
         let sb = UIStoryboard.init(name: "LXHPopoverViewController", bundle: nil)
+        //创建需要model出来的控制器
         let popover = sb.instantiateInitialViewController()!
+        //设置需要model出来的控制的大小
         poperObjc.presentFrame = CGRect.init(x: UIScreen.main.bounds.size.width*0.5-100, y:44 , width: 200, height: 250)
+        //设置代理为自定义的一个类：该类遵守UIViewControllerTransitioningDelegate,UIViewControllerAnimatedTransitioning 这两个代理并实现其中的方法
         popover.transitioningDelegate = poperObjc
 //        popover.transitioningDelegate = self
+        //设置model出来的方式为自定义
         popover.modalPresentationStyle = UIModalPresentationStyle.custom
-        
+    
         present(popover, animated: true, completion: nil)
     }
     
